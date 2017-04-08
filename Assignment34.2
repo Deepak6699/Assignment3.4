@@ -1,0 +1,28 @@
+package acadgild1;
+public class Assign34Static {
+	public static void main(String args[]){
+		details d1=new details("M",123);
+		d1.showDetails();
+		details d2=new details("N",132);
+		d2.showDetails();
+		details.colonyShifted();
+		details d3=new details("K",1234);
+		d3.showDetails();
+	} 
+}
+class details{
+	String name;
+	int houseno;
+	static String colony="prakash nagar";
+	
+	static void colonyShifted(){
+		colony="central zone";
+	}
+	details(String owner,int drno){
+		name=owner;
+		houseno=drno;
+	}
+	void showDetails(){
+		System.out.println("Name: "+name+" "+"houseno: "+houseno+" "+"colony:"+colony);
+	}
+}
